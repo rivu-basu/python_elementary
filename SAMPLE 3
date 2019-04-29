@@ -1,0 +1,16 @@
+#Write a program that prints the next 20 leap years.(Without function creation)
+year=int(input("Enter base year: "))
+c=0
+if (year%100)%4==0:
+    print("Base year is a leap year: " + str(year))
+    for i in range(1,21):
+        print(year+(i*4))
+else:
+    while(c!=1):
+        year +=1 #counter to the immediate next leap year if entered year is not a leap year 
+        if (year%100)%4==0:
+            print(year)
+            c=1
+            for i in range(1,20):
+                print(year+(i*4))
+               
