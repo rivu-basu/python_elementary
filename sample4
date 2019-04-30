@@ -1,0 +1,7 @@
+#Simple fibonacci series generation
+fis = [0, 1] #first two values of the series as they are the only exceptions in number generation
+num = int(input('How many Fibonacci numbers do you want? '))
+for i in range(num-2):
+ fis.append(fis[-2] + fis[-1])
+print(fis)
+#Indent the above line (insert a space at the beginning of print) if you want to print like a numerical pyramid.
