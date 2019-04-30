@@ -1,0 +1,22 @@
+#Write a guessing game where the user has to guess a secret number. 
+#After every guess the program tells the user whether their number was too large or too small.
+#At the end the number of tries needed should be printed. 
+import random
+x=random.randint(1,101) #random number generation
+c=0 #Try counter
+switch=0 #Switch to end the program when correct number guessed. Game Over.
+while switch!=1:
+    d=int(input("Guess a number: "))
+    if d==x:
+          print("\n You are correct")
+          switch=1
+          c+=1
+    elif d>x:
+          print("Too large")
+          c+=1
+    elif d<x:
+          print("Too small")
+          c+=1
+    else:
+          print("incorrect input")
+print("\n No. of tries: "+str(c)+"\n ---- GAME OVER ----")
