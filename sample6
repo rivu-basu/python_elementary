@@ -1,0 +1,20 @@
+#Default program for creating a menu or ordering from a menu at a restaurant
+name=print("Welcome to Bad Food.com")
+default_menu=["1.Steak","2.Fish & chips"
+              ,"3.Pizza","4.Burgers"]
+user=int(input("Press for: "+"\n 1.Customer"+"\n 2.Manager "))
+if(user==2):
+    password=int(input("\n Enter password: "))
+    if(password==1234):
+        new_item="5."+input("\n Enter new item: ")
+        default_menu.append(new_item)
+        print(default_menu)
+    else:
+        print("\n Wrong Password")
+elif(user==1):
+    print(default_menu)
+    order=int(input("\n Enter choice: "))
+    print(default_menu[order-1])
+else:
+    print("Wrong input")
+print("Thank You, for the order")
